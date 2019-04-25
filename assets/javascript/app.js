@@ -46,11 +46,12 @@ database.ref().on("child_added", function (childsnapshot) {
     var dbFreq = childsnapshot.val().tFreq;
     //calculations will be done in the app and not stored on the db to save space
     //create momentInst to hold the date we are using to calculate and then specify it's format
-    var momentIsnt = moment(dbTime, "MM/DD/YYYY")
+    var momentIsnt = moment(dbTime, "mm:ss")
     //calculate the month worked using diff- review moment.js
     var monthsWorked = momentIsnt.diff(moment(), 'months') * -1;
     //calculate the total billed
-    var minutesAway = monthsWorked * dbRate;
+    var minutesAway = "";
+    //monthsWorked * dbRate;
    
 
    //jquery variables for ease of use to append and create a new row with the captured data from the database

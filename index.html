@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Time Sheet</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
@@ -12,8 +13,8 @@
 <body>
     <div class="container">
     <div class="jumbotron">
-        <h1 class="display-4">PAYROLL SUMMARY</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4">Train Scheduler</h1>
+        <p class="lead"></p>
     </div>
    
     <table class="table">
@@ -27,34 +28,26 @@
             </tr>
         </thead>
         <tbody>
-            <!-- <tr>
-            <td id="name">Mark</td>
-            <td id="role">Developer</td>
-            <td id="start-date">01/01/01</td>
-            <td id="months-worked">12</td>
-            <td id="monthly-rate">300</td>
-            <td id="total-billed">30000</td>
-            </tr> -->
-            
+         
         </tbody>
     </table>
 
     <form>
             <div class="form-group">
                 <label for="emp-name">Train Name</label>
-                <input type="text" class="form-control" id="emp-name" aria-describedby="emailHelp" value="">
+                <input type="text" class="form-control" id="train-name" aria-describedby="emailHelp" value="">
             </div>
             <div class="form-group">
                 <label for="emp-role">Destination</label>
-                <input type="text" class="form-control" id="emp-role" value="">
+                <input type="text" class="form-control" id="destination" value="">
             </div>
             <div class="form-group">
                     <label for="emp-start">First Train Time (HH:mm - Military Tim</label>
-                    <input type="text" class="form-control" id="emp-start" value="">
+                    <input type="text" class="form-control" id="train-time" value="">
             </div>
             <div class="form-group">
                     <label for="emp-rate">Frequency (min)</label>
-                    <input type="text" class="form-control" id="emp-rate" value="">
+                    <input type="text" class="form-control" id="frequency" value="">
             </div>
             
             <button id="submit" type="submit" class="btn btn-primary">Submit</button>
