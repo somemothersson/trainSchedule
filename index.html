@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Sheet</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">PAYROLL SUMMARY</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    </div>
+   
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Frequency(min)</th>
+            <th scope="col">Next Arrival</th>
+            <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+            <td id="name">Mark</td>
+            <td id="role">Developer</td>
+            <td id="start-date">01/01/01</td>
+            <td id="months-worked">12</td>
+            <td id="monthly-rate">300</td>
+            <td id="total-billed">30000</td>
+            </tr> -->
+            
+        </tbody>
+    </table>
+
+    <form>
+            <div class="form-group">
+                <label for="emp-name">Train Name</label>
+                <input type="text" class="form-control" id="emp-name" aria-describedby="emailHelp" value="">
+            </div>
+            <div class="form-group">
+                <label for="emp-role">Destination</label>
+                <input type="text" class="form-control" id="emp-role" value="">
+            </div>
+            <div class="form-group">
+                    <label for="emp-start">First Train Time (HH:mm - Military Tim</label>
+                    <input type="text" class="form-control" id="emp-start" value="">
+            </div>
+            <div class="form-group">
+                    <label for="emp-rate">Frequency (min)</label>
+                    <input type="text" class="form-control" id="emp-rate" value="">
+            </div>
+            
+            <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+            </form>
+     
+        </div> 
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+<script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/moment.js"></script>
+</html>
+
+</tbody>
