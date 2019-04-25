@@ -48,7 +48,7 @@ database.ref().on("child_added", function (childsnapshot) {
     //create momentInst to hold the date we are using to calculate and then specify it's format
     var momentIsnt = moment(dbTime, "mm:ss")
     //calculate the month worked using diff- review moment.js
-    var monthsWorked = momentIsnt.diff(moment(), 'months') * -1;
+    var minutesAway = momentIsnt.diff(moment(), 'minutes') * -1;
     //calculate the total billed
     var minutesAway = "";
     //monthsWorked * dbRate;
