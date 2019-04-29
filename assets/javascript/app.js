@@ -14,6 +14,24 @@ firebase.initializeApp(config);
 //set variable for databse 
 var database = firebase.database();
 
+
+$(document).ready(function(){
+   $('input.timepicker').timepicker({
+       timeFormat: 'HH:mm:ss',
+       // year, month, day and seconds are not important
+       minTime: new Date(0, 0, 0, 8, 0, 0),
+       maxTime: new Date(0, 0, 0, 15, 0, 0),
+       // time entries start being generated at 6AM but the plugin 
+       // shows only those within the [minTime, maxTime] interval
+       startHour: 6,
+       // the value of the first item in the dropdown, when the input
+       // field is empty. This overrides the startHour and startMinute 
+       // options
+       startTime: new Date(0, 0, 0, 8, 20, 0),
+       // items in the dropdown are separated by at interval minutes
+       interval: 10
+   });
+});
 //on click of submit to grab user input fields and submit to firebase
 $(document).on("click", "button", function () {
 
@@ -28,8 +46,6 @@ $(document).on("click", "button", function () {
 
  //object created to store the captured information that will be pushed to the database   
     var newTrain = {
-
-   //use a different name for the jquery caputure which be the value, from the key that will be stored in the db
         tName: trainName,
         tDest: destination,
         tTime: trainTime,
