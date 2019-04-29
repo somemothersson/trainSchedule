@@ -15,16 +15,23 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
-var timepicker = new TimePicker('time', {
-   lang: 'en',
-   theme: 'dark'
- });
- timepicker.on('change', function(evt) {
+// var timepicker = new TimePicker('time', {
+//    lang: 'en',
+//    theme: 'dark'
+//  });
+//  timepicker.on('change', function(evt) {
    
-var value = (evt.hour || '00') + ':' + (evt.minute || '00');
-evt.element.value = value;
+// var value = (evt.hour || '00') + ':' + (evt.minute || '00');
+// evt.element.value = value;
 
- });
+//  });
+
+$("#train-time").flatpickr({
+   enableTime: true,
+   noCalendar: true,
+   time_24hr: true,
+   dateFormat: "H:i",
+});
 //on click of submit to grab user input fields and submit to firebase
 $(document).on("click", "button", function () {
 
