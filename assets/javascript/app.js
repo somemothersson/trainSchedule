@@ -32,6 +32,12 @@ $("#train-time").flatpickr({
    time_24hr: true,
    dateFormat: "H:i",
 });
+$("#frequency").flatpickr({
+   enableTime: true,
+   noCalendar: true,
+   time_24hr: true,
+   dateFormat: "i",
+});
 //on click of submit to grab user input fields and submit to firebase
 $(document).on("click", "button", function () {
 
@@ -43,6 +49,7 @@ $(document).on("click", "button", function () {
     var destination = $("#destination").val().trim()
     var trainTime = $("#train-time").val().trim()
     var frequency = $("#frequency").val().trim()
+    console.log("freq", frequency)
 
  //object created to store the captured information that will be pushed to the database   
     var newTrain = {
