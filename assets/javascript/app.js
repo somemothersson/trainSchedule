@@ -15,23 +15,16 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
-$(document).ready(function(){
-   $('input.timepicker').timepicker({
-       timeFormat: 'HH:mm:ss',
-       // year, month, day and seconds are not important
-       minTime: new Date(0, 0, 0, 8, 0, 0),
-       maxTime: new Date(0, 0, 0, 15, 0, 0),
-       // time entries start being generated at 6AM but the plugin 
-       // shows only those within the [minTime, maxTime] interval
-       startHour: 6,
-       // the value of the first item in the dropdown, when the input
-       // field is empty. This overrides the startHour and startMinute 
-       // options
-       startTime: new Date(0, 0, 0, 8, 20, 0),
-       // items in the dropdown are separated by at interval minutes
-       interval: 10
-   });
-});
+var timepicker = new TimePicker('time', {
+   lang: 'en',
+   theme: 'dark'
+ });
+ timepicker.on('change', function(evt) {
+   
+var value = (evt.hour || '00') + ':' + (evt.minute || '00');
+evt.element.value = value;
+
+ });
 //on click of submit to grab user input fields and submit to firebase
 $(document).on("click", "button", function () {
 

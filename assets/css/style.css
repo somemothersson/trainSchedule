@@ -3,3 +3,35 @@
     background-repeat: no-repeat;
    
 } */
+div.table {
+    position: relative;
+    display: table;
+  }
+  .center { text-align: center }
+  .right { position:absolute; right: 5px }
+  span.icon {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    padding: 5px;
+    background-color: #eee;
+    border-left: 1px solid #ccc;
+  }
+a.icon {
+    display: table-cell;
+    width: 32px;
+    text-indent: -9999px;
+    border: 1px solid transparent;
+  }
+  a.icon:hover {
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #ccc;
+  }
+i.icon {
+    display: block;
+    width: 32px;
+    height: 36px;
+  }
+  i.icon, a.icon {
+    background: url("https://cdn.rawgit.com/jonataswalker/timepicker.js/master/examples/clock.png") no-repeat center center;
