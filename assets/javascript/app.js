@@ -88,7 +88,7 @@ database.ref().on("child_added", function (childsnapshot) {
   
 
 
-   //-------------Begin Code from Tutorial------------------   
+   //-------------End Code from Tutorial------------------   
 
 
    //jquery variables for ease of use to append and create a new row with the captured data from the database
