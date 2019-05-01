@@ -74,16 +74,21 @@ database.ref().on("child_added", function (childsnapshot) {
     var dbFreq = childsnapshot.val().tFreq;
 
     //calculations will be done in the app and not stored on the db to save space
-    //create momentInst to hold the date we are using to calculate and then specify it's format
+
+    
    //Calculations from https://www.codeseek.co/dquez/train-schedule-wrpxzY - couldnt figure this out myself
+   //create momentInst to hold the date we are using to calculate and then specify it's format
    var momentIsnt = moment(dbTime, "hh:mm")
+   //Capture the current time
    var currentTime = moment().format("hh:mm")
+
    var diffTime = moment().diff(moment(momentIsnt), "minutes");
    var tRemainder = diffTime % dbFreq;
    console.log(tRemainder);
+   //calculate how many minutes away the train is
    var minutesAway = dbFreq - tRemainder;
    console.log("min-away", minutesAway);
-   // var nextTrain = firstTrainConverted.add(diffTime + minutesAway ).minutes();
+
    var nextTrain = moment().add(minutesAway, "minutes");
    var nextTrain2 = moment().add(2, "minutes")
    console.log("num1" + nextTrain);
@@ -94,7 +99,7 @@ database.ref().on("child_added", function (childsnapshot) {
    console.log(momentIsnt)
      //calculate when the next train will arrive
      
-    //calculate how many minutes away the train is
+    
     
    
 
