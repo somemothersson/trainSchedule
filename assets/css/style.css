@@ -1,5 +1,21 @@
-/* body {
+.container{
     background-image: url(/assets/images/Amtrak.jpg);
     background-repeat: no-repeat;
+    
+}
+.jumbotron{
+    background-color: transparent !important;
+}
    
-} */
+}
+.jumbotron h1{
+    opacity: 1;   
+} 
+
+.tabHead {
+    background-color: blue
+
+}
+.table {
+    background-color: #435b66;
+}

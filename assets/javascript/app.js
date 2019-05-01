@@ -75,15 +75,30 @@ database.ref().on("child_added", function (childsnapshot) {
 
     //calculations will be done in the app and not stored on the db to save space
     //create momentInst to hold the date we are using to calculate and then specify it's format
-    var momentIsnt = moment(dbTime, "mm:ss")
+   //Calculations from https://www.codeseek.co/dquez/train-schedule-wrpxzY - couldnt figure this out myself
+   var momentIsnt = moment(dbTime, "hh:mm")
+   var currentTime = moment().format("hh:mm")
+   var diffTime = moment().diff(moment(momentIsnt), "minutes");
+   var tRemainder = diffTime % dbFreq;
+   console.log(tRemainder);
+   var minutesAway = dbFreq - tRemainder;
+   console.log("min-away", minutesAway);
+   // var nextTrain = firstTrainConverted.add(diffTime + minutesAway ).minutes();
+   var nextTrain = moment().add(minutesAway, "minutes");
+   var nextTrain2 = moment().add(2, "minutes")
+   console.log("num1" + nextTrain);
+   console.log("num2" + nextTrain2);
+   nextTrain = moment(nextTrain).format("HH:mm");
+   console.log("num1" + nextTrain);
+   console.log(currentTime)
+   console.log(momentIsnt)
+     //calculate when the next train will arrive
+     
+    //calculate how many minutes away the train is
+    
+   
 
-    //calculate the month worked using diff- review moment.js
-    var minutesAway = momentIsnt.diff(moment(), 'minutes') * -1;
-
-    //calculate the total billed
-    var minutesAway = "";
-
-    //monthsWorked * dbRate;
+   
    
 
    //jquery variables for ease of use to append and create a new row with the captured data from the database
@@ -91,8 +106,8 @@ database.ref().on("child_added", function (childsnapshot) {
     var tRow = $("<tr>")
     var trainTd = $("<td>").text(dbTrain)
     var destTd = $("<td>").text(dbDest)
-    var freqTd = $("<td>").text(dbTime)
-    var nextTd = $("<td>").text(dbFreq)
+    var freqTd = $("<td>").text(dbFreq)
+    var nextTd = $("<td>").text(nextTrain)
     var minuesTd = $("<td>").text(minutesAway)
     
 
