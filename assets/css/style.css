@@ -16,9 +16,11 @@ body{
 .tabHead {
     background-color: #8d88a6;
     color: aliceblue;
+    border-radius: 10px;
 }
 .table {
     background-color: #c6c3d4;
+    border-radius: 10px;
 }
 .btn {
     background-color:  #c1c3da;
