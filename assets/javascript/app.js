@@ -88,15 +88,8 @@ database.ref().on("child_added", function (childsnapshot) {
   
 
 
-   //-------------Begin Code from Tutorial------------------
-     //calculate when the next train will arrive
-     
-    
-    
-   
+   //-------------Begin Code from Tutorial------------------   
 
-   
-   
 
    //jquery variables for ease of use to append and create a new row with the captured data from the database
     var tBody = $("tbody");
