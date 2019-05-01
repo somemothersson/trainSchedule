@@ -1,21 +1,33 @@
-.container{
-    background-image: url(/assets/images/Amtrak.jpg);
-    background-repeat: no-repeat;
-    
+body{
+    background-color:#7C90B8;
 }
 .jumbotron{
-    background-color: transparent !important;
+     background-image: url(/assets/images/Amtrak.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    text-shadow: #435b66;
+    font-size: 40px;
+    
 }
    
-}
-.jumbotron h1{
-    opacity: 1;   
-} 
+
 
 .tabHead {
-    background-color: blue
+    background-color: #c1c3da;
 
 }
 .table {
-    background-color: #435b66;
+    background-color: #c6c3d4;
 }
+.btn {
+    background-color:  #32313E;
+}
+
+/* c1c3da
+c6c3d4
+a6a6be
+8d88a6
+a1a9ce
+96aacd */
+
