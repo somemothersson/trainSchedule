@@ -5,9 +5,7 @@ body{
 .jumbotron{
      background-image: url(/assets/images/Amtrak.jpg);
     background-repeat: no-repeat;
-    text-align: center;
-    
-    
+    text-align: center; 
 }
 .display-6{
     color: #fff;
@@ -15,12 +13,9 @@ body{
     font-size: 60px !important; 
 }
    
-
-
 .tabHead {
     background-color: #8d88a6;
     color: aliceblue;
-
 }
 .table {
     background-color: #c6c3d4;
@@ -30,7 +25,6 @@ body{
 }
 .form-control {
     background-color: #a6a6be;
-
 }
 form {
     background-color: #8d88a6;
